@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pojištěnci - Formulář pro ukládání informací o uživatelích do místního úložiště">
+    <meta name="keywords" content="Pojištěnci, formulář, ukládání informací, místní úložiště">
+    <meta name="author" content="Vojtěch Krampota">
+    <title>Pojištěnci</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Pojištěnci</a>
+    </nav>
+    <main class="container my-5">
+        <h2 id="userFormTitle">Vytvořit pojištence</h2>
+        <section class="card mb-4">
+            <div class="card-body">
+                <form id="userForm" class="row">
+                    <div class="form-group col-lg-6">
+                        <label for="name">Jméno:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="surname">Příjmení:</label>
+                        <input type="text" id="surname" name="surname" class="form-control" required>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="age">Věk:</label>
+                        <input type="number" id="age" name="age" class="form-control" min="1" required>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="phone">Telefon:</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" required>
+                    </div>
+                    <div class="col">
+                        <button id="submitBtn" type="submit" class="btn btn-primary">Vytvořit</button>
+                        <button id="cancelBtn" type="button" class="btn btn-secondary d-none">Zrušit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section>
+            <h2>Pojištenci</h2>
+            <table id="userData" class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>Jméno</th>
+                        <th>Příjmení</th>
+                        <th>Věk</th>
+                        <th>Telefon</th>
+                        <th>Akce</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data from local storage will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+#userData th,
+#userData td {
+    vertical-align: middle;
+}
+
+#userData th:last-child,
+#userData td:last-child {
+    width: 100px;
+}
